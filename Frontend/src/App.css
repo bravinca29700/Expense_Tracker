@@ -1,0 +1,316 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #111827;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 24px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  margin-bottom: 35px;
+}
+
+header h1 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -1.5px;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* =========================
+   SUMMARY
+========================= */
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 35px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+}
+
+.card h2 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* =========================
+   BUDGET CONTROLS
+========================= */
+
+.card > input,
+.card > div input {
+  width: 100%;
+  padding: 11px 12px;
+  margin-bottom: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #111827;
+  background: #ffffff;
+}
+
+.card input:focus {
+  outline: none;
+  border-color: #6b7280;
+}
+
+.card > button,
+.card > div > button {
+  padding: 9px 14px;
+  border: none;
+  border-radius: 7px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card > button:hover,
+.card > div > button:hover {
+  background: #374151;
+}
+
+.budget-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.budget-actions button {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.budget-actions button:hover {
+  background: #f3f4f6;
+}
+
+/* =========================
+   EXPENSE FORM
+========================= */
+
+.expense-form {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 35px;
+}
+
+.expense-form h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.expense-form input {
+  padding: 12px 14px;
+  margin-right: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 15px;
+}
+
+.expense-form input::placeholder {
+  color: #9ca3af;
+}
+
+.expense-form input:focus {
+  outline: none;
+  border-color: #6b7280;
+}
+
+.expense-form button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.expense-form button:hover {
+  background: #374151;
+}
+
+/* =========================
+   EXPENSE LIST
+========================= */
+
+.expenses {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.expenses h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   EXPENSE ROW
+========================= */
+
+.expense {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 4px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.expense:last-child {
+  border-bottom: none;
+}
+
+.expense > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.expense > div span:first-child {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.expense > div span:last-child {
+  margin-left: 20px;
+  font-size: 17px;
+  font-weight: 800;
+  color: #111827;
+  white-space: nowrap;
+}
+
+/* =========================
+   EXPENSE BUTTONS
+========================= */
+
+.expense button {
+  width: 68px;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.expense button:hover {
+  background: #f3f4f6;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .app {
+    padding: 30px 18px;
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .card h2 {
+    font-size: 30px;
+  }
+
+  .expense-form input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .expense-form button {
+    width: 100%;
+  }
+
+  .expense {
+    grid-template-columns: 1fr auto auto;
+    gap: 8px;
+  }
+
+  .expense > div {
+    display: block;
+  }
+
+  .expense > div span {
+    display: block;
+  }
+
+  .expense > div span:last-child {
+    margin-left: 0;
+    margin-top: 4px;
+  }
+
+  .expense button {
+    width: 62px;
+  }
+}
